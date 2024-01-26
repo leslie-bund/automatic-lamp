@@ -1,0 +1,21 @@
+<div class="border p-1.5 flex relative rounded-full w-fit gap-x-2">
+  <img
+    src="assets/Rectangle_1061.svg"
+    alt=""
+    (click)="nameShown = !nameShown"
+  />
+  <div
+    [ngClass]="nameShown ? 'absolute' : 'hidden'"
+    class="bg-white z-10 shadow rounded-md px-3 py-2 right-0 top-11
+           lg:bg-inherit lg:block lg:static lg:text-right lg:shadow-none lg:p-0"
+  >
+    <div class="text-xs">Justin Bergson</div>
+    <small class="text-slate-400">Justin&#64;gmail.com</small>
+  </div>
+  <img
+    src="assets/Header-icons/Arrow-Down.svg"
+    class="arrow"
+    alt=""
+    (click)="nameShown = !nameShown"
+  />
+</div>

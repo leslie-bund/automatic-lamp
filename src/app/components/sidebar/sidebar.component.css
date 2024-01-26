@@ -1,0 +1,11 @@
+.end-border::after {
+  content: '';
+  display: inline-flex;
+  position: relative;
+  /* top: 8px;
+  right: -13.5px; */
+  
+  width: 0.325rem;
+  height: 1.5rem;
+  @apply rounded-s-md bg-slate-700 dark:bg-slate-400 ms-auto md:top-2 md:-right-3.5;
+}

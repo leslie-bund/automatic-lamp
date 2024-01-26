@@ -1,0 +1,90 @@
+<div
+  [ngClass]="{
+  'w-14 h-14': !sidebarOpen, 
+  'w-full h-screen': sidebarOpen
+}"
+  class="sidebar md:w-16 bg-stone-100 dark:bg-gray-900 md:shadow dark:shadow-slate-500 md:border dark:border-slate-700 overflow-clip md:h-screen flex flex-col justify-between items-start"
+>
+  <div class="flex md:flex-col justify-between flex-wrap w-full gap-y-4 md:gap-y-0">
+    <div class="w-fit border bg-white rounded-full border-spacing-0 mt-3 ms-3 mb-5">
+      <svg
+      (click)="sidebarOpen = !sidebarOpen"
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95429 0 0 8.95431 0 20C0 31.0457 8.95429 40 20 40ZM26.2393 9.31684C26.543 8.23805 25.4961 7.60013 24.54 8.2813L11.1931 17.7896C10.1562 18.5283 10.3193 20 11.4381 20H14.9527V19.9728H21.8025L16.2212 21.9421L13.7607 30.6832C13.457 31.762 14.5038 32.3999 15.46 31.7187L28.8069 22.2105C29.8438 21.4718 29.6806 20 28.5619 20H23.2321L26.2393 9.31684Z"
+          fill="#34CAA5"
+        />
+      </svg>
+    </div>
+    <div class="menus order-2 basis-full md:basis-auto">
+      <div class="flex flex-col gap-4 pb-6 lg:gap-5 md:py-5">
+        <div class="ps-4 md:ps-5 whitespace-nowrap text-neutral-400 flex gap-4 md:block" routerLink="" routerLinkActive="border-slate-700 end-border">
+          <img class="inline-block md:shadow dark:rounded dark:shadow dark:bg-opacity-50 dark:bg-slate-100 dark:drop-shadow-md dark:shadow-slate-300" src="assets/sidbar-icons/category.png" alt="">
+          <span class="md:hidden">
+            Dashboard
+          </span>
+        </div>
+        <div class="ps-4 md:ps-5 whitespace-nowrap text-neutral-400 flex gap-4 md:block">
+          <img class="inline-block" src="assets/sidbar-icons/trend-up.svg" alt="">
+          <span class="md:hidden">
+            Trend
+          </span>
+        </div>
+        <div class="ps-4 md:ps-5 whitespace-nowrap text-neutral-400 flex gap-4 md:block">
+          <img class="inline-block" src="assets/sidbar-icons/profile-2user.svg" alt="">
+          <span class="md:hidden">
+            Users
+          </span>
+        </div>
+        <div class="ps-4 md:ps-5 whitespace-nowrap text-neutral-400 flex gap-4 md:block">
+          <img class="inline-block" src="assets/sidbar-icons/box.svg" alt="">
+          <span class="md:hidden">
+            Products
+          </span>
+        </div>
+        <div class="ps-4 md:ps-5 whitespace-nowrap text-neutral-400 flex gap-4 md:block">
+          <img class="inline-block" src="assets/sidbar-icons/discount-shape.svg" alt="">
+          <span class="md:hidden">
+            Discount
+          </span>
+        </div>
+        <div class="ps-4 md:ps-5 whitespace-nowrap text-neutral-400 flex gap-4 md:block">
+          <img class="inline-block" src="assets/sidbar-icons/info-circle.svg" alt="">
+          <span class="md:hidden">
+            About
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="relative z-50 md:order-3 flex md:flex-col items-center gap-3 me-3 md:me-0">
+      <app-light-switch></app-light-switch>
+      <div class="md:hidden">
+        <mat-icon (click)="sidebarOpen = false" class="text-neutral-400" >close</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="exit">
+    <div class="flex flex-col gap-3 px-4 pb-6 lg:gap-5 md:p-5">
+      <div class="whitespace-nowrap text-neutral-400 flex gap-4">
+        <img class="w-6" src="assets/sidbar-icons/arrow-right.svg" alt="" />
+        <span class="md:hidden">Support</span>
+      </div>
+      <div class="whitespace-nowrap text-neutral-400 flex gap-4">
+        <img class="w-6" src="assets/sidbar-icons/setting-2.svg" alt="" />
+        <span class="md:hidden">Settings</span>
+      </div>
+      <div class="whitespace-nowrap text-neutral-400 flex gap-4">
+        <img class="w-6" src="assets/sidbar-icons/logout.svg" alt="" />
+        <span class="md:hidden">Logout</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,6 +10,12 @@ import { LightSwitchComponent } from './components/light-switch/light-switch.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material/material.module';
 import { NameTagComponent } from './components/name-tag/name-tag.component';
+import { MonthlyGainsCardComponent } from './components/monthly-gains-card/monthly-gains-card.component';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { DashboardTableComponent } from './components/dashboard-table/dashboard-table.component';
+import { SalesTrendBarChartComponent } from './components/sales-trend-bar-chart/sales-trend-bar-chart.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -19,12 +25,18 @@ import { NameTagComponent } from './components/name-tag/name-tag.component';
     HeaderComponent,
     LightSwitchComponent,
     NameTagComponent,
+    MonthlyGainsCardComponent,
+    ProgressBarComponent,
+    DashboardTableComponent,
+    SalesTrendBarChartComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgApexchartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

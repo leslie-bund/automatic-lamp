@@ -1,0 +1,18 @@
+th, td {
+    @apply first-of-type:ps-0 first-of-type:pe-8 ps-4 text-left whitespace-nowrap align-middle py-2.5;
+}
+tr {
+    @apply border-b py-2 last-of-type:border-b-0 dark:border-slate-600;
+}
+th {
+    @apply text-base font-medium text-neutral-500
+}
+.myTable {
+    width: calc(100vw - 2.5rem);
+}
+
+@media screen and (min-width: 767px) {
+    .myTable {
+        width: 100%;
+    }
+}

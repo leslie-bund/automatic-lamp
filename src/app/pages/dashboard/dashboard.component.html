@@ -1,0 +1,65 @@
+<div class="grid gap-4 px-2 pt-3 pb-8 md:grid-cols-2 main-grid">
+  <div class="card">
+    <div class="card-title mb-5">
+      <div class="card-title-text">Sales Trends</div>
+      <div class="flex items-center dark:text-slate-400">
+        Sort by:&nbsp;
+        <div class="inline-flex items-center px-2 py-1 border rounded-full dark:border-slate-500">
+          Weekly
+
+          <svg
+            class="arrow"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.19841 6.20675C3.43891 5.95614 3.81525 5.93336 4.08045 6.1384L4.15643 6.20675L10 12.2955L15.8436 6.20675C16.0841 5.95614 16.4604 5.93336 16.7256 6.1384L16.8016 6.20675C17.0421 6.45735 17.064 6.84951 16.8672 7.12585L16.8016 7.20502L10.479 13.7933C10.2385 14.0439 9.86217 14.0666 9.59697 13.8616L9.52099 13.7933L3.19841 7.20502C2.93386 6.92935 2.93386 6.48241 3.19841 6.20675Z"
+              fill="#0D062D"
+              class="dark:fill-neutral-400"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <app-sales-trend-bar-chart></app-sales-trend-bar-chart>
+  </div>
+  <div class="grid md:grid-cols-2 other gap-4">
+    <div class="card" *ngFor="let data of gainsData">
+      <app-monthly-gains-card
+        [icon]="data.icon"
+        [card-title]="data.title | titlecase"
+        [value]="data.value"
+        [gain]="data.gain"
+      ></app-monthly-gains-card>
+    </div>
+  </div>
+  <div class="card w-full">
+    <div class="card-title mb-4">
+      <div class="card-title-text">Last Orders</div>
+      <div class="seeAll">See All</div>
+    </div>
+    <!-- <div class="flex overflow-x-scroll w-full"> -->
+    <app-dashboard-table></app-dashboard-table>
+    <!-- </div> -->
+  </div>
+  <div class="card">
+    <div class="card-title mb-6">
+      <div class="card-title-text">Top Platform</div>
+      <div class="seeAll">See All</div>
+    </div>
+    <app-progress-bar
+      *ngFor="let item of topPlatforms"
+      [progressTitle]="item.title | titlecase"
+      [amount]="item.amount"
+      [increasedPercent]="item.percentIncrease"
+      [totalPercent]="item.totalPercent"
+      [color]="item.color"
+    ></app-progress-bar>
+  </div>
+</div>
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quam voluptatem. Ea dicta modi distinctio commodi maiores quisquam voluptatibus pariatur in, hic quibusdam et facilis necessitatibus cum, totam libero dolores!
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consequatur dolore dolorum nisi suscipit sint impedit dolores enim! Necessitatibus quis inventore quia error quae cumque obcaecati maxime autem dolores esse.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum culpa, voluptatibus soluta, minima assumenda exercitationem esse ipsa necessitatibus ratione aliquam, doloremque magni incidunt quos nihil maiores. Fugit beatae laudantium sapiente? -->

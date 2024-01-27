@@ -1,12 +1,13 @@
 <div [ngClass]="{ 'dark': darkModeSelected$ | async }" >
-  <div  class="bg-stone-100 dark:bg-gray-900">
-    <div class="flex h-full max-h-full">
+  <div  class="flex bg-stone-100 dark:bg-gray-900 h-full max-h-full w-screen">
+    <!-- <div class=""> -->
       <div class="fixed top-0 left-0 z-50 md:static">
         <app-sidebar></app-sidebar>
       </div>
-      <div class="basis-full" >
+      <div class="basis-full h-screen overflow-y-auto" [ngClass]="{ 'dark': darkModeSelected$ | async }"  >
         <app-header></app-header>
+        <router-outlet />
       </div>
-    </div>
+    <!-- </div> -->
   </div>
 </div>
